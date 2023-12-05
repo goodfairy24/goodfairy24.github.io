@@ -8,12 +8,13 @@ Start
 6. Answer the question using personalised language
 End'''
 
-user_name = input("Hello, my name is Uni Buddy. What is your name? : ")
+user_name = input("Hello, my name is Uni Buddy. What is your name? : ").capitalize() # capitalize used to ensure correct grammar
 
-while True: 
+while True:  # while loop to ensure that the user can re input their age if they enter a number less than 18.
+
     user_age = int(input("How old are you? : "))
 
-    if user_age > 35:
+    if user_age > 35:  # Age greater than 35 first so that I can suggest activities for different age groups.
         print(f"Hello {user_name}. It is lovely to meet you.")
         print("There are some great activities onsite for people of your age. Check these out;")
         print('''
@@ -21,7 +22,7 @@ while True:
     2. Join in with our yoga classes on a Tuesday and Thuursday @ 7:30
     3. Meet up with other mature students in the cafeteria on Sunday @ 2pm)
     4. Join our wellbeing webinars everyday @ 4 pm''')
-        break
+        break # Break the while loop to avoid an infinite loop.
     
     elif user_age >= 25:
         print(f"Hello {user_name}. It is lovely to meet you.")
@@ -43,13 +44,16 @@ while True:
     4. Tours of the library @ 11 on Monday and Thursday''')
         break
     
-    else:
+    else:  # else for an age entered less than 18, not eligible for university
         print("Please enter an age over 17")
-        continue
+        continue # continue loop so that the user can re enter their age
 
-fav_food = input("What type of food do you like to eat? : ").lower()
 
-if fav_food == "chinese":
+
+fav_food = input("What type of food do you like to eat? : ").lower() # lower used to ensure that input matches string
+
+
+if fav_food == "chinese": # Specific food types chosen if there is specific information to give
     print(f"If your favourite food is {fav_food}, we have a noodle bar at weekends in the cafeteria")
 
 elif fav_food == "indian":
@@ -58,13 +62,13 @@ elif fav_food == "indian":
 elif fav_food == "mexican":
     print(f"If your favourite food is {fav_food}, our weekly cooking classes often teach simple mexican inpired meals. Why not join!")
 
-else:
+else: # else so that a useful output is given for any input given
     print('''There are a wide range of restaurants, take aways, international shops in the area
 as well as our wonderful cafeteria. You are sure to find something delicious to eat!''')
 
 question = input("If you have a question for me, please enter it here : ")
 print(f"Thank you for your question {user_name}")
-print('''
+print('''  
 Here are some our our frequently asked questions.
 If you can't find your answer here please contact our friendly student support team.
 - Where is the student union? 
@@ -75,5 +79,5 @@ If you can't find your answer here please contact our friendly student support t
       When you have your student login details, your schedule will be on your student dashboard.
 - What are the cafeteria opening times?
       The cafeteria is open from 6:30am - 6:30pm every weekday. Outside of these times there are self service options available.''')
-
-print(f"It has been great chatting with you today {user_name}")
+# FAQ included as any question could be asked. 
+print(f"It has been great chatting with you today {user_name}") # Personalised end statement so the user knows that the Uni buddy has ended
