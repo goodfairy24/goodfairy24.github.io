@@ -1,0 +1,66 @@
+/* this is a comment*/
+
+html{
+    font-family:"Raleway", Serif;
+    box-sizing: border-box;
+    padding-left: 5%;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+h1{
+    font-size: 3em;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: bold;
+    color:dodgerblue;
+    background-color:aliceblue;
+    text-align: center;
+}
+
+#about-description{
+    font-size: 2em;
+    text-align:left;
+    font-weight:lighter;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: bold;
+    color:rgba(165, 42, 42, 0.785);
+    text-align:inherit;
+}
+
+#skills-list{
+    background-color:azure;
+    color:darkblue;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+h3{
+    font-size: 2em;
+    text-align: left;
+    font-weight: lighter;
+}
+
+p{
+    font-size: 2em;
+    text-align: center;
+    font-style: italic;
+    background-color: rgb(246, 233, 183);
+}
+
+
+body{
+    background-color: blanchedalmond;
+    background-image: linear-gradient(62deg,rgba(0, 0, 255, 0.367) 0%, rgba(183, 0, 255, 0.148) 100%);
+}
