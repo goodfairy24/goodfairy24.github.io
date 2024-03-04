@@ -8,6 +8,7 @@ Start
 6. Replace specific nucleotide patterns
 End
 '''
+#the dna sequences for the genetic markers are saved in a dictionary so are easy to find.
 trait_marker_dict = {'TA':'blue eyes',
                      'TC':'brown eyes',
                      'TG':'green eyes',
@@ -16,6 +17,7 @@ trait_marker_dict = {'TA':'blue eyes',
                      'GC':'black hair'
                     }
 
+#a function is used to search for genetic markers in the dna sequences
 dna_sequence = input('Enter the DNA sequence: ').upper()
 print(dna_sequence)
 
@@ -36,9 +38,10 @@ if genetic_marker3 in dna_sequence:
 if genetic_marker4 in dna_sequence:
     print(f'genetic marker found:',{genetic_marker4})
 
-
+#user input to find out if they would like to replace a letter
 replace_letter = input('Would you like to replace a letter?: Yes or  No : ').capitalize()
 
+#user input to find out if they would like to replace a letter
 if replace_letter == 'Yes':
     letter1 = input('Which letter would you like to replace? :').upper()
     letter2 = input("What letter would you like to replace it with? :").upper()
@@ -47,8 +50,11 @@ if replace_letter == 'Yes':
 else:
     print('No letter replaced')
 
+#user input to find out which letter they would like to segment the dna sequence by
 segment = input('What letter would you like to segment the sequence by? :').upper()
 
+#try, except block in place for if the user chose to replace a letter, if not to use 
+#the origional sequence entered
 try:
     seg_dna_seq = dna_sequence_replace.split(segment)
 except:
@@ -56,6 +62,8 @@ except:
 
 print(seg_dna_seq)
 
+#create a list of any genetic markers found in the dictionary so that they can all be 
+#printed for the user
 genetic_trait = []
 for i in seg_dna_seq:
     if i in trait_marker_dict:
